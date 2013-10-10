@@ -1,5 +1,5 @@
 require 'spec_helper'
 
-describe PasswordsController do
+describe BestbayDevise::PasswordsController do
 
 end
