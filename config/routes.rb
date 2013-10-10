@@ -1,6 +1,17 @@
 Hunters::Application.routes.draw do
 
+  # Resources
+  resources :categories
+  resources :products
 
+
+  devise_for :users, :controllers => {
+    :registrations => "bestbay_devise/registrations",
+    :sessions => "bestbay_devise/sessions",
+    :passwords => "bestbay_devise/passwords"
+  }
+
+<<<<<<< HEAD
   resources :static_pages
 
 
@@ -12,8 +23,10 @@ Hunters::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "static_pages#index"
+
   match '/home',  to: 'static_pages#index', via: 'get'
+  root :to => "home#index"
+
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
