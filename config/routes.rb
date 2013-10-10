@@ -4,7 +4,6 @@ Hunters::Application.routes.draw do
   resources :categories
   resources :products
 
-
   devise_for :users, :controllers => {
     :registrations => "bestbay_devise/registrations",
     :sessions => "bestbay_devise/sessions",
@@ -12,13 +11,6 @@ Hunters::Application.routes.draw do
   }
 
   resources :static_pages
-
-
-  resources :categories
-
-
-  resources :products
-
 
   match '/home',  to: 'static_pages#index', via: 'get'
   root :to => "home#index"
