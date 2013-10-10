@@ -23,6 +23,17 @@
     <%= f.label :category %><br />
     <%= f.number_field :category %>
   </div>
+
+    <div class="field">
+      <%= f.label :brand %><br />
+      <%= f.text_field :brand %>
+    </div>
+
+    <div class="field">
+      <%= f.label :type %><br />
+      <%= f.text_field :type %>
+    </div>
+
   <div class="field">
     <%= f.label :condition %><br />
     <%= f.check_box :condition %>
@@ -39,6 +50,23 @@
     <%= f.label :is_bid %><br />
     <%= f.check_box :is_bid %>
   </div>
+
+    <div class="field">
+      <%= f.label :listing_days %><br />
+      <%= f.text_field :listing_days %>
+    </div>
+
+
+    <div class="field">
+      <%= f.label :start_date %><br />
+      <%= f.text_field :start_date %>
+    </div>
+
+    <div class="field">
+      <%= f.label :shipping_cost %><br />
+      <%= f.text_field :shipping_cost %>
+    </div>
+
   <div class="actions">
     <%= f.submit %>
   </div>

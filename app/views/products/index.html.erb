@@ -5,10 +5,15 @@
     <th>Id</th>
     <th>Title</th>
     <th>Category</th>
+    <th>Brand</th>
+    <th>Type</th>
     <th>Condition</th>
     <th>Starting price</th>
     <th>Fixed price</th>
     <th>Is bid</th>
+    <th>Listing Days</th>
+    <th>Start Date</th>
+    <th>Shipping Cost</th>
     <th></th>
     <th></th>
     <th></th>
@@ -19,10 +24,15 @@
     <td><%= product.id %></td>
     <td><%= product.title %></td>
     <td><%= product.category %></td>
+    <td><%= product.brand %></td>
+    <td><%= product.type %></td>
     <td><%= product.condition %></td>
     <td><%= product.starting_price %></td>
     <td><%= product.fixed_price %></td>
     <td><%= product.is_bid %></td>
+    <td><%= product.listing_days %></td>
+    <td><%= product.start_date %></td>
+    <td><%= product.shipping_cost%></td>
     <td><%= link_to 'Show', product %></td>
     <td><%= link_to 'Edit', edit_product_path(product) %></td>
     <td><%= link_to 'Destroy', product, method: :delete, data: { confirm: 'Are you sure?' } %></td>

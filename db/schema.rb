@@ -11,13 +11,18 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131010154430) do
+ActiveRecord::Schema.define(:version => 20131010225718) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
     t.string   "description"
     t.datetime "created_at",  :null => false
     t.datetime "updated_at",  :null => false
+  end
+
+  create_table "data_files", :force => true do |t|
+    t.datetime "created_at", :null => false
+    t.datetime "updated_at", :null => false
   end
 
   create_table "products", :force => true do |t|
@@ -29,6 +34,11 @@ ActiveRecord::Schema.define(:version => 20131010154430) do
     t.boolean  "is_bid"
     t.datetime "created_at",     :null => false
     t.datetime "updated_at",     :null => false
+    t.string   "brand"
+    t.string   "type"
+    t.integer  "listing_days"
+    t.date     "start_date"
+    t.decimal  "shipping_cost"
   end
 
   create_table "static_pages", :force => true do |t|

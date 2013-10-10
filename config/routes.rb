@@ -11,7 +11,6 @@ Hunters::Application.routes.draw do
     :passwords => "bestbay_devise/passwords"
   }
 
-<<<<<<< HEAD
   resources :static_pages
 
 

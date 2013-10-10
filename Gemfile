@@ -55,5 +55,6 @@ gem 'rspec-rails'
 gem 'devise'
 group :development do
 #  gem 'ruby-debug-base19x' 
-#  gem 'ruby-debug-ide' 
+#  gem 'ruby-debug-ide'
+
 end
