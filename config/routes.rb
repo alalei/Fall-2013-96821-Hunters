@@ -20,9 +20,6 @@ Hunters::Application.routes.draw do
   resources :products
 
 
-  devise_for :users
-
-
   match '/home',  to: 'static_pages#index', via: 'get'
   root :to => "home#index"
 
