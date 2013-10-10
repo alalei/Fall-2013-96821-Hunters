@@ -4,12 +4,10 @@ describe "categories/index" do
   before(:each) do
     assign(:categories, [
       stub_model(Category,
-        :id => 1,
         :name => "Name",
         :description => "Description"
       ),
       stub_model(Category,
-        :id => 1,
         :name => "Name",
         :description => "Description"
       )
