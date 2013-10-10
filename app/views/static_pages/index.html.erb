@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<% if signed_in? %>
+    <div class="row">
+      <aside class="span4">
+        <section>
+        </section>
+        <section>
+        </section>
+      </aside>
+      <div class="span8">
+        <h3>Courses</h3>
+      </div>
+    </div>
+<% else %>
+    <div class="center hero-unit">
+      <h1>Welcome to the BestBay</h1>
+      <h2>
+        This is the home page for for Hunters' leaning rails web development.
+      </h2>
+      <%= link_to "Sign up now!", "#", class: "btn btn-large btn-primary" %>
+    </div>
+<% end %>
+</html>

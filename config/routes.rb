@@ -1,6 +1,9 @@
 Hunters::Application.routes.draw do
 
 
+  resources :static_pages
+
+
   resources :categories
 
 
@@ -9,7 +12,8 @@ Hunters::Application.routes.draw do
 
   devise_for :users
 
-  root :to => "home#index"
+  root :to => "static_pages#index"
+  match '/home',  to: 'static_pages#index', via: 'get'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
