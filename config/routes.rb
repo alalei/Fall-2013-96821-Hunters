@@ -10,8 +10,6 @@ Hunters::Application.routes.draw do
     :sessions => "bestbay_devise/sessions",
     :passwords => "bestbay_devise/passwords"
   }
-
-<<<<<<< HEAD
   resources :static_pages
 
 
