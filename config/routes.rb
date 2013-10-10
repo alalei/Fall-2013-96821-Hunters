@@ -1,13 +1,15 @@
 Hunters::Application.routes.draw do
 
-
+  # Resources
   resources :categories
-
-
   resources :products
 
 
-  devise_for :users
+  devise_for :users, :controllers => {
+    :registrations => "bestbay_devise/registrations",
+    :sessions => "bestbay_devise/sessions",
+    :passwords => "bestbay_devise/passwords"
+  }
 
   root :to => "home#index"
 
