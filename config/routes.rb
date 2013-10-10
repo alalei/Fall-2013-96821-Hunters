@@ -13,6 +13,8 @@ Hunters::Application.routes.draw do
   resources :static_pages
 
   match '/home',  to: 'static_pages#index', via: 'get'
+  match '/about',  to: 'static_pages#about', via: 'get'
+  match '/contact',  to: 'static_pages#contact', via: 'get'
   root :to => "home#index"
 
 
