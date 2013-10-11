@@ -26,7 +26,7 @@
     </div>
 
     <div class="field">
-      <%= f.label :ptype %><br />
+      <%= f.label :product_type %><br />
       <%= f.text_field :ptype %>
     </div>
 
@@ -64,11 +64,13 @@
       <%= f.text_field :listing_days %>
     </div>
 
+     <div class="field">
+       Start Date (mm/dd/YYYY)<br />
+       <input type="text" id="start_date" name="start_date" >
+     </div>
 
-    <div class="field">
-      <%= f.label :start_date %><br />
-      <%= f.text_field :start_date %>
-    </div>
+
+
 
     <div class="field">
       <%= f.label :shipping_cost %><br />
@@ -83,6 +85,15 @@
      </div>
 
 
+
+     <script type="text/javascript">
+         $(document).ready(function(){
+             $('#start_date').datepicker({
+                 todayBtn: true,
+                 todayHighlight: true
+             });
+         })
+     </script>
 
 
 

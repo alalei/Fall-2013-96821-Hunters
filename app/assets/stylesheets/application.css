@@ -11,6 +11,7 @@
  *= require_self
  *= require_tree .
  */
+
   .alert{
       font-weight: bold;
       -moz-border-radius: 4px 4px 4px 4px;
