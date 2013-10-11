@@ -11,15 +11,15 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :id %><br />
-    <%= f.text_field :id %>
-  </div>
+
   <div class="field">
     <%= f.label :title %><br />
     <%= f.text_field :title %>
   </div>
-
+    <div class="field">
+      <%= %><br />
+      <%= f.select :category_id, Category.all.map{|c| [c.name,c.id]}, prompt: 'select category' %>
+    </div>
     <div class="field">
       <%= f.label :brand %><br />
       <%= f.text_field :brand %>

@@ -2,11 +2,13 @@ require 'spec_helper'
 
 describe "products/show" do
   before(:each) do
-
-    @product = assign(:product, stub_model(Product,
+    @category = assign(:category, mock_model(Category,
+      :id => 1,
+      :name => "Shoes"))
+    @product = assign(:product, mock_model(Product,
       :id => 1,
       :title => "Title",
-      #:category => @category,
+      :category => @category,
       :condition => false,
       :starting_price => "9.99",
       :fixed_price => "9.99",
