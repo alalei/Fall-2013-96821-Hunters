@@ -57,7 +57,8 @@ group :development do
 #  gem 'ruby-debug-base19x' 
 #  gem 'ruby-debug-ide'
 
-gem "carrierwave"
-gem "ImageResize"
 
 end
+
+gem "carrierwave"
+# gem "ImageResize"
