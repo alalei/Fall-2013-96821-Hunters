@@ -62,3 +62,4 @@ end
 
 gem "carrierwave"
 # gem "ImageResize"
+gem 'nested_form'
