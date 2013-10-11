@@ -47,30 +47,33 @@
 
 
   <div class="field">
-    <%= f.label :starting_price %><br />
-    <%= f.text_field :starting_price %>
-  </div>
-  <div class="field">
     <%= f.label :fixed_price %><br />
     <%= f.text_field :fixed_price %>
   </div>
+
+
+
   <div class="field">
     <%= f.label :is_bid %><br />
     <%= f.check_box :is_bid %>
   </div>
 
-    <div class="field">
+
+
+     <div id= is_bid class="is_bid">
+       <%= f.label :starting_price %><br />
+       <%= f.text_field :starting_price %>
+      <p></p>
       <%= f.label :listing_days %><br />
       <%= f.text_field :listing_days %>
-    </div>
+        <p></p>
+       <div class="field">
+         Start Date (mm/dd/YYYY)<br />
+         <%= f.text_field :start_date %>
+       </div>
 
-     <div class="field">
-       Start Date (mm/dd/YYYY)<br />
-       <%= f.text_field :start_date %>
      </div>
-
-
-
+        <p></p>
 
     <div class="field">
       <%= f.label :shipping_cost %><br />
@@ -84,8 +87,6 @@
        <%= f.text_field :remote_image_url %>
      </div>
 
-
-
      <script type="text/javascript">
          $(document).ready(function(){
              $('#product_start_date').datepicker({
@@ -94,16 +95,8 @@
              });
          })
      </script>
-
-
-
-
-
-
-
-
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit class: 'button big blue'%>
   </div>
 
 
