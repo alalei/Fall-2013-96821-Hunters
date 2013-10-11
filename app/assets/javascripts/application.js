@@ -12,16 +12,22 @@
 //
 //= require jquery
 //= require jquery_ujs
+//= require bootstrap
 //= require_tree .
 
 jQuery(function($) {
     changeFunction();
     $('#product_condition_true').change(changeFunction);
     $('#product_condition_false').change(changeFunction);
+    $('#product_is_bid').change(changeFunction);
 });
 
 function changeFunction(){
          //alert(document.getElementById('product_condition_true').checked);
     var div = document.getElementById('daysUsed');
     div.style.display = (document.getElementById('product_condition_true').checked == true ? "none" : "block");
+
+    var div = document.getElementById('is_bid');
+    div.style.display = (document.getElementById('product_is_bid').checked == false ? "none" : "block");
+
 }
