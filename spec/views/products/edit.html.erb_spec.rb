@@ -34,7 +34,7 @@ describe "products/edit" do
       assert_select "input#product_fixed_price[name=?]", "product[fixed_price]"
       assert_select "input#product_is_bid[name=?]", "product[is_bid]"
       assert_select "input#product_brand[name=?]", "product[brand]"
-      assert_select "input#product_type[name=?]", "product[type]"
+      assert_select "input#product_ptype[name=?]", "product[ptype]"
       assert_select "input#product_listing_days[name=?]", "product[listing_days]"
       assert_select "input#product_start_date[name=?]", "product[start_date]"
       assert_select "input#product_shipping_cost[name=?]", "product[shipping_cost]"
