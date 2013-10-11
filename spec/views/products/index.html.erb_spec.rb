@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe "products/index" do
   before(:each) do
-    assign(:category, mock_model(Category,
-                                 :name => "CategoryName"))
+  @category = mock_model(Category,
+                                 :id => 1, :name => "CategoryName")
     assign(:products, [
-      stub_model(Product,
+        mock_model(Product,
         :id => 1,
         :title => "Title",
-        #:category => @category,
+        :category => @category,
         :condition => false,
         :starting_price => "9.99",
         :fixed_price => "9.99",
@@ -19,10 +19,10 @@ describe "products/index" do
         :start_date => "",
         :shipping_cost => ""
       ),
-      stub_model(Product,
+        mock_model(Product,
         :id => 2,
         :title => "Title",
-        #:category => @category,
+        :category => @category,
         :condition => false,
         :starting_price => "9.99",
         :fixed_price => "9.99",
