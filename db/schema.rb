@@ -27,7 +27,7 @@ ActiveRecord::Schema.define(:version => 20131011063206) do
 
   create_table "products", :force => true do |t|
     t.string   "title"
-    t.integer  "category"
+    t.integer  "category_id"
     t.boolean  "condition"
     t.decimal  "starting_price"
     t.decimal  "fixed_price"
