@@ -14,7 +14,7 @@ describe "products/edit" do
       :fixed_price => "9.99",
       :is_bid => false,
       :brand => "",
-      :type => "",
+      :ptype => "",
       :listing_days => "",
       :start_date => "",
       :shipping_cost => ""
@@ -29,7 +29,7 @@ describe "products/edit" do
       #assert_select "input#product_id[name=?]", @product.id
       assert_select "input#product_title[name=?]", "product[title]"
       assert_select "select#product_category_id[name=?]", "product[category_id]"
-      assert_select "input#product_condition[name=?]", "product[condition]"
+      #assert_select "input#product_condition[name=?]", "product[condition]"
       assert_select "input#product_starting_price[name=?]", "product[starting_price]"
       assert_select "input#product_fixed_price[name=?]", "product[fixed_price]"
       assert_select "input#product_is_bid[name=?]", "product[is_bid]"
