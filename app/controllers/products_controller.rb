@@ -25,7 +25,7 @@ class ProductsController < ApplicationController
   # GET /products/new.json
   def new
     @product = Product.new
-
+    @conditon = params[:condition]
     respond_to do |format|
       format.html # new.html.erb
       format.json { render json: @product }
@@ -41,7 +41,9 @@ class ProductsController < ApplicationController
   # POST /products.json
   def create
     @product = Product.new(params[:product])
-
+    if @product.condition == true
+      @product.days_used = ""
+    end
     respond_to do |format|
       if @product.save
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
