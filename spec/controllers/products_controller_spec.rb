@@ -23,7 +23,7 @@ describe ProductsController do
   # This should return the minimal set of attributes required to create a valid
   # Product. As you add validations to Product, be sure to
   # adjust the attributes here as well.
-  let(:valid_attributes) { { "id" => "1.5" } }
+  let(:valid_attributes) { { "id" => "1" ,"fixed_price" => "25", "starting_price" => "12", "shipping_cost" => "15" } }
 
   # This should return the minimal set of values that should be in the session
   # in order to pass any filters (e.g. authentication) defined in
