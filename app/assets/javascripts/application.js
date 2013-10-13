@@ -23,7 +23,7 @@ jQuery(function($) {
 });
 //change display according to the value of radio button
 function changeFunction(){
-         //alert(document.getElementById('product_condition_true').checked);
+    //alert(document.getElementById('product_condition_true').checked);
     var div = document.getElementById('daysUsed');
     div.style.display = (document.getElementById('product_condition_true').checked == true ? "none" : "block");
 
