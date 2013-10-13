@@ -21,7 +21,7 @@ jQuery(function($) {
     $('#product_condition_false').change(changeFunction);
     $('#product_is_bid').change(changeFunction);
 });
-
+//change display according to the value of radio button
 function changeFunction(){
          //alert(document.getElementById('product_condition_true').checked);
     var div = document.getElementById('daysUsed');

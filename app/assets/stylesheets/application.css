@@ -11,7 +11,7 @@
  *= require_self
  *= require_tree .
  */
-
+  /* Alert */
   .alert{
       font-weight: bold;
       -moz-border-radius: 4px 4px 4px 4px;
@@ -44,7 +44,7 @@
  *= require_self
  *= require_tree .
  */
-
+  /* Button */
 .button{
   font:15px Calibri, Arial, sans-serif;
 

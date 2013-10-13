@@ -1,8 +1,12 @@
 class Product < ActiveRecord::Base
+  #Product attributes
   attr_accessible :category_id, :condition, :fixed_price, :id, :is_bid, :starting_price, :title, :brand, :ptype, :listing_days, :start_date, :shipping_cost, :image, :remote_image_url, :days_used
 
+  #Relationship to Category and User
   belongs_to :category
   belongs_to :user
+
+  #Image upload
   mount_uploader :image, ImageUploader
 
   #delegate :name, :to => :category, :prefix => true
@@ -31,7 +35,7 @@ class Product < ActiveRecord::Base
       message: 'Image must be a .gif, ,jpg or .png file'
   }
 
-  #  Comment
+  #Set days_used to NULL for new product
   def resetDaysUsedIfNewProduct
     if self.condition == true
       self.days_used = ""
