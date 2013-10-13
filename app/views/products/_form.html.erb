@@ -42,7 +42,7 @@
      <div id="daysUsed" class="DaysUsed" style="display: none">
        <br/>
        Days Used
-       <%= f.select :days_used, options_for_select(["Less than 1 week", "1 to 3 months", "3 to 6 months", "6 month to 1 year", "More than 1 year", "More than 5 years"],@product.days_used), :class => 'genForm_dropBox' %>
+       <%= f.select :days_used, optionsForDaysUsedDropDown(@product.days_used), :class => 'genForm_dropBox' %>
      </div>
 
 

@@ -6,6 +6,7 @@ class Product < ActiveRecord::Base
   belongs_to :user
   mount_uploader :image, ImageUploader
 
+  #delegate :name, :to => :category, :prefix => true
   #validates :fixed_price,
    #         numericality: { greater_than_or_equal_to: 0,
     #                        less_than_or_equal_to: 1000000 }
@@ -16,4 +17,9 @@ class Product < ActiveRecord::Base
    #         numericality: { greater_than_or_equal_to: 0,
     #                        less_than_or_equal_to: 1000000 }
 
+  def resetDaysUsedIfNewProduct
+    if self.condition == true
+      self.days_used = ""
+    end
+  end
 end

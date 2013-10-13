@@ -1,0 +1,21 @@
+Sat, 12 Oct 2013 20:13:42 -0400
+doc/README_FOR_APP	Fri, 11 Oct 2013 07:24:42 -0400
+app/controllers/application_controller.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/controllers/bestbay_devise/passwords_controller.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/controllers/bestbay_devise/registrations_controller.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/controllers/bestbay_devise/sessions_controller.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/controllers/categories_controller.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/controllers/products_controller.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/controllers/static_pages_controller.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/helpers/application_helper.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/helpers/categories_helper.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/helpers/passwords_helper.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/helpers/products_helper.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/helpers/registrations_helper.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/helpers/sessions_helper.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/helpers/static_pages_helper.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/models/category.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/models/product.rb	Fri, 11 Oct 2013 14:00:09 -0400
+app/models/static_page.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/models/user.rb	Fri, 11 Oct 2013 07:24:42 -0400
+app/uploaders/image_uploader.rb	Fri, 11 Oct 2013 07:24:42 -0400

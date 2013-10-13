@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20131011111535) do
+ActiveRecord::Schema.define(:version => 20131013000025) do
 
   create_table "categories", :force => true do |t|
     t.string   "name"
@@ -37,6 +37,8 @@ ActiveRecord::Schema.define(:version => 20131011111535) do
     t.string   "image"
     t.string   "days_used"
   end
+
+  add_index "products", ["category_id"], :name => "index_products_by_category"
 
   create_table "static_pages", :force => true do |t|
     t.datetime "created_at", :null => false

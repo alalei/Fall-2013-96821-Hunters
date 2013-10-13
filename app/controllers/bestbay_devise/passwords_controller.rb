@@ -1,5 +1,4 @@
 class BestbayDevise::PasswordsController < Devise::PasswordsController
-  
 
   def index
   end
