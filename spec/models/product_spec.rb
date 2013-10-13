@@ -20,8 +20,6 @@ describe Product do
     it { should_not be_valid }
   end
 
-
-
   describe "when fixed price is in range" do
     before { @product.fixed_price = 1 }
     it { should be_valid }
