@@ -1,6 +1,7 @@
 module ApplicationHelper
 
 	# Returns the page title dynamically
+=begin
 	def full_title(page_title)
 
 		#Default Title Prefix
@@ -12,4 +13,5 @@ module ApplicationHelper
 			"#{base_title} | #{page_title}"
 		end
 	end
+=end
 end

@@ -51,14 +51,12 @@ gem 'bootstrap-sass', '2.3.2.0'
 # gem 'debugger'
 
 #suggested gems by Todd
-gem 'factory_girl_rails' 
-gem 'rspec-rails' 
+gem 'factory_girl_rails'
+gem 'rspec-rails'
 gem 'devise'
 group :development do
-#  gem 'ruby-debug-base19x' 
+#  gem 'ruby-debug-base19x'
 #  gem 'ruby-debug-ide'
-
-
 end
 
 gem "carrierwave"

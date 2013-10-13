@@ -31,17 +31,18 @@
     </div>
 
      <div class="condition">
-       <%= f.label :condition %><br />
-       <%= f.label :condition, "New", :value => 1  %>
+       <%= f.label :condition %>
+       New
        <%= f.radio_button :condition, true,  :checked => @product.condition?%>
-       <%= f.label :condition, "Used", :value => 0 %>
+       Used
        <%= f.radio_button :condition, false, :checked => !@product.condition? %>
      </div>
 
 
      <div id="daysUsed" class="DaysUsed" style="display: none">
+       <br/>
        Days Used
-       <%= f.select :days_used, options_for_select(["Less than 1 week", "1 to 3 months", "3 to 6 months", "6 month to 1 year", "More than 1 year", "More than 5 years"],@product.days_used), :class => 'genForm_dropBox' %>
+       <%= f.select :days_used, optionsForDaysUsedDropDown(@product.days_used), :class => 'genForm_dropBox' %>
      </div>
 
 
@@ -54,7 +55,7 @@
 
 
   <div class="field">
-    <%= f.label :is_bid %><br />
+    Enable Bidding
     <%= f.check_box :is_bid %>
   </div>
 

@@ -8,6 +8,7 @@
           <% if !signed_in? %> <li><%= link_to "Sign up",    new_user_registration_url %></li><%end %>
           <% if signed_in? %>
               <li><%= link_to "Users", "#" %></li>
+              <li><%= link_to "Add Product", new_product_url %></li>
               <li id="fat-menu" class="dropdown">
                 <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                   Account <b class="caret"></b>

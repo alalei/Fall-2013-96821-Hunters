@@ -10,12 +10,14 @@ class StaticPagesController < ApplicationController
     end
   end
 
+=begin
   def home
     respond_to do |format|
       format.html # show.html.erb
       format.json { render json: @static_page }
     end
   end
+=end
 
   # GET /static_pages/1
   # GET /static_pages/1.json
@@ -54,7 +56,7 @@ class StaticPagesController < ApplicationController
         format.html { redirect_to @static_page, notice: 'Static page was successfully created.' }
         format.json { render json: @static_page, status: :created, location: @static_page }
       else
-        format.html { render action: "new" }
+        format.html { render "new" }
         format.json { render json: @static_page.errors, status: :unprocessable_entity }
       end
     end
@@ -70,7 +72,7 @@ class StaticPagesController < ApplicationController
         format.html { redirect_to @static_page, notice: 'Static page was successfully updated.' }
         format.json { head :no_content }
       else
-        format.html { render action: "edit" }
+        format.html { render "edit" }
         format.json { render json: @static_page.errors, status: :unprocessable_entity }
       end
     end
