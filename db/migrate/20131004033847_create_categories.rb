@@ -1,4 +1,8 @@
+##
+# Create Categories table
 class CreateCategories < ActiveRecord::Migration
+  ##
+  # Create table
   def change
     create_table :categories do |t|
       t.integer :id

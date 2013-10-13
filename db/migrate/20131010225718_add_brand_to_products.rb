@@ -1,4 +1,8 @@
+##
+# Add Brand, Type, Listing days, Start date, Shipping Cost to Products table
 class AddBrandToProducts < ActiveRecord::Migration
+  ##
+  # Add columns
   def change
     add_column :products, :brand, :string
     add_column :products, :type, :string

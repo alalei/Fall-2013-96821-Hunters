@@ -1,4 +1,8 @@
+##
+# Create Products table
 class CreateProducts < ActiveRecord::Migration
+  ##
+  # Create table
   def change
     create_table :products do |t|
       t.float :id

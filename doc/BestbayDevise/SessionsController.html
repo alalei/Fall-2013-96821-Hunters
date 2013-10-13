@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta content="text/html; charset=IBM437" http-equiv="Content-Type">
+
+<title>class BestbayDevise::SessionsController - RDoc Documentation</title>
+
+<link type="text/css" media="screen" href="../rdoc.css" rel="stylesheet">
+
+<script type="text/javascript">
+  var rdoc_rel_prefix = "../";
+</script>
+
+<script type="text/javascript" charset="utf-8" src="../js/jquery.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/navigation.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search_index.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/search.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/searcher.js"></script>
+<script type="text/javascript" charset="utf-8" src="../js/darkfish.js"></script>
+
+
+<body id="top" class="class">
+<nav id="metadata">
+  <nav id="home-section" class="section">
+  <h3 class="section-header">
+    <a href="../index.html">Home</a>
+    <a href="../table_of_contents.html#classes">Classes</a>
+    <a href="../table_of_contents.html#methods">Methods</a>
+  </h3>
+</nav>
+
+
+  <nav id="search-section" class="section project-section" class="initially-hidden">
+  <form action="#" method="get" accept-charset="utf-8">
+    <h3 class="section-header">
+      <input type="text" name="search" placeholder="Search" id="search-field"
+             title="Type to search, Up and Down to navigate, Enter to load">
+    </h3>
+  </form>
+
+  <ul id="search-results" class="initially-hidden"></ul>
+</nav>
+
+
+  <div id="file-metadata">
+    <nav id="file-list-section" class="section">
+  <h3 class="section-header">Defined In</h3>
+  <ul>
+    <li>app/controllers/bestbay_devise/sessions_controller.rb
+  </ul>
+</nav>
+
+    
+  </div>
+
+  <div id="class-metadata">
+    
+    <nav id="parent-class-section" class="section">
+  <h3 class="section-header">Parent</h3>
+  
+  <p class="link">Devise::SessionsController
+  
+</nav>
+
+    
+    <!-- Method Quickref -->
+<nav id="method-list-section" class="section">
+  <h3 class="section-header">Methods</h3>
+
+  <ul class="link-list">
+    
+    <li><a href="#method-i-create">#create</a>
+    
+    <li><a href="#method-i-destroy">#destroy</a>
+    
+    <li><a href="#method-i-edit">#edit</a>
+    
+    <li><a href="#method-i-index">#index</a>
+    
+    <li><a href="#method-i-new">#new</a>
+    
+    <li><a href="#method-i-update">#update</a>
+    
+  </ul>
+</nav>
+
+  </div>
+
+  <div id="project-metadata">
+    <nav id="fileindex-section" class="section project-section">
+  <h3 class="section-header">Pages</h3>
+
+  <ul>
+  
+    <li class="file"><a href="../Gemfile.html">Gemfile</a>
+  
+    <li class="file"><a href="../Manual.html">Manual</a>
+  
+    <li class="file"><a href="../Rakefile.html">Rakefile</a>
+  
+    <li class="file"><a href="../public/robots_txt.html">robots</a>
+  
+  </ul>
+</nav>
+
+    <nav id="classindex-section" class="section project-section">
+  <h3 class="section-header">Class and Module Index</h3>
+
+  <ul class="link-list">
+  
+    <li><a href="../BestbayDevise.html">BestbayDevise</a>
+  
+    <li><a href="../BestbayDevise/PasswordsController.html">BestbayDevise::PasswordsController</a>
+  
+    <li><a href="../BestbayDevise/RegistrationsController.html">BestbayDevise::RegistrationsController</a>
+  
+    <li><a href="../BestbayDevise/SessionsController.html">BestbayDevise::SessionsController</a>
+  
+    <li><a href="../Hunters.html">Hunters</a>
+  
+    <li><a href="../Hunters/Application.html">Hunters::Application</a>
+  
+    <li><a href="../AddBrandToProducts.html">AddBrandToProducts</a>
+  
+    <li><a href="../AddDaysUsedToProducts.html">AddDaysUsedToProducts</a>
+  
+    <li><a href="../AddImageToProducts.html">AddImageToProducts</a>
+  
+    <li><a href="../AddIndexes.html">AddIndexes</a>
+  
+    <li><a href="../AddUsernamesToUsers.html">AddUsernamesToUsers</a>
+  
+    <li><a href="../ApplicationController.html">ApplicationController</a>
+  
+    <li><a href="../ApplicationHelper.html">ApplicationHelper</a>
+  
+    <li><a href="../CategoriesController.html">CategoriesController</a>
+  
+    <li><a href="../Category.html">Category</a>
+  
+    <li><a href="../CreateCategories.html">CreateCategories</a>
+  
+    <li><a href="../CreateProducts.html">CreateProducts</a>
+  
+    <li><a href="../CreateStaticPages.html">CreateStaticPages</a>
+  
+    <li><a href="../DeviseCreateUsers.html">DeviseCreateUsers</a>
+  
+    <li><a href="../FixColumnName.html">FixColumnName</a>
+  
+    <li><a href="../ImageUploader.html">ImageUploader</a>
+  
+    <li><a href="../Object.html">Object</a>
+  
+    <li><a href="../Product.html">Product</a>
+  
+    <li><a href="../ProductsController.html">ProductsController</a>
+  
+    <li><a href="../ProductsHelper.html">ProductsHelper</a>
+  
+    <li><a href="../RenameCategoryColumn.html">RenameCategoryColumn</a>
+  
+    <li><a href="../StaticPage.html">StaticPage</a>
+  
+    <li><a href="../StaticPagesController.html">StaticPagesController</a>
+  
+    <li><a href="../User.html">User</a>
+  
+  </ul>
+</nav>
+
+  </div>
+</nav>
+
+<div id="documentation">
+  <h1 class="class">class BestbayDevise::SessionsController</h1>
+
+  <div id="description" class="description">
+    <dl class="rdoc-list note-list"><dt>Author
+<dd>
+<p><a href="../Hunters.html">Hunters</a>  (<a
+href="mailto:fall-2013-hunters@sv.cmu.edu">fall-2013-hunters@sv.cmu.edu</a>)</p>
+</dd><dt>Copyright
+<dd>
+<p>Copyright (c) 2013 Carnegie Mellon University</p>
+</dd><dt>License
+<dd>
+<p>Distributes under the same terms as Ruby</p>
+</dd></dl>
+
+<p>This class overrides sessions handling for Devise - not used for now</p>
+
+  </div><!-- description -->
+
+  
+  
+  
+  <section id="5Buntitled-5D" class="documentation-section">
+    
+
+    
+
+    
+
+    
+
+    <!-- Methods -->
+    
+     <section id="public-instance-5Buntitled-5D-method-details" class="method-section section">
+      <h3 class="section-header">Public Instance Methods</h3>
+
+    
+      <div id="method-i-create" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">create</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="create-source">
+            <pre><span class="ruby-comment"># File app/controllers/bestbay_devise/sessions_controller.rb, line 15</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
+      <span class="ruby-keyword">super</span>
+  <span class="ruby-comment">#create your process here for what you want to do when people signing up</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- create-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- create-method -->
+
+    
+      <div id="method-i-destroy" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">destroy</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="destroy-source">
+            <pre><span class="ruby-comment"># File app/controllers/bestbay_devise/sessions_controller.rb, line 30</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
+      <span class="ruby-keyword">super</span>
+  <span class="ruby-comment">#this function is used for deleting user data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- destroy-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- destroy-method -->
+
+    
+      <div id="method-i-edit" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">edit</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="edit-source">
+            <pre><span class="ruby-comment"># File app/controllers/bestbay_devise/sessions_controller.rb, line 20</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
+      <span class="ruby-keyword">super</span>
+  <span class="ruby-comment">#create your process here for edit user data page</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- edit-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- edit-method -->
+
+    
+      <div id="method-i-index" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">index</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="index-source">
+            <pre><span class="ruby-comment"># File app/controllers/bestbay_devise/sessions_controller.rb, line 7</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">index</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- index-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- index-method -->
+
+    
+      <div id="method-i-new" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">new</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="new-source">
+            <pre><span class="ruby-comment"># File app/controllers/bestbay_devise/sessions_controller.rb, line 10</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
+      <span class="ruby-keyword">super</span>
+  <span class="ruby-comment">#create your process here for sign up page</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- new-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- new-method -->
+
+    
+      <div id="method-i-update" class="method-detail ">
+        
+        <div class="method-heading">
+          <span class="method-name">update</span><span
+            class="method-args">()</span>
+          <span class="method-click-advice">click to toggle source</span>
+        </div>
+        
+
+        <div class="method-description">
+          
+          
+          
+
+          
+          <div class="method-source-code" id="update-source">
+            <pre><span class="ruby-comment"># File app/controllers/bestbay_devise/sessions_controller.rb, line 25</span>
+<span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
+      <span class="ruby-keyword">super</span>
+  <span class="ruby-comment">#create your process here for what you want to do when people editing their data</span>
+<span class="ruby-keyword">end</span></pre>
+          </div><!-- update-source -->
+          
+        </div>
+
+        
+
+        
+      </div><!-- update-method -->
+
+    
+    </section><!-- public-instance-method-details -->
+  
+  </section><!-- 5Buntitled-5D -->
+
+</div><!-- documentation -->
+
+
+<footer id="validator-badges">
+  <p><a href="http://validator.w3.org/check/referer">[Validate]</a>
+  <p>Generated by <a href="https://github.com/rdoc/rdoc">RDoc</a> 3.12.2.
+  <p>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish Rdoc Generator</a> 3.
+</footer>
+
