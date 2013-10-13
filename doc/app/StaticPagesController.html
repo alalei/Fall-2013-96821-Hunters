@@ -80,8 +80,6 @@
     
     <li><a href="#method-i-edit">#edit</a>
     
-    <li><a href="#method-i-home">#home</a>
-    
     <li><a href="#method-i-index">#index</a>
     
     <li><a href="#method-i-new">#new</a>
@@ -125,13 +123,9 @@
   
     <li><a href="./CategoriesController.html">CategoriesController</a>
   
-    <li><a href="./CategoriesHelper.html">CategoriesHelper</a>
-  
     <li><a href="./Category.html">Category</a>
   
     <li><a href="./ImageUploader.html">ImageUploader</a>
-  
-    <li><a href="./PasswordsHelper.html">PasswordsHelper</a>
   
     <li><a href="./Product.html">Product</a>
   
@@ -139,15 +133,9 @@
   
     <li><a href="./ProductsHelper.html">ProductsHelper</a>
   
-    <li><a href="./RegistrationsHelper.html">RegistrationsHelper</a>
-  
-    <li><a href="./SessionsHelper.html">SessionsHelper</a>
-  
     <li><a href="./StaticPage.html">StaticPage</a>
   
     <li><a href="./StaticPagesController.html">StaticPagesController</a>
-  
-    <li><a href="./StaticPagesHelper.html">StaticPagesHelper</a>
   
     <li><a href="./User.html">User</a>
   
@@ -198,7 +186,7 @@
 
           
           <div class="method-source-code" id="about-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 91</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 93</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">about</span>
 
 <span class="ruby-keyword">end</span></pre>
@@ -228,7 +216,7 @@
 
           
           <div class="method-source-code" id="contact-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 95</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 97</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">contact</span>
 
 <span class="ruby-keyword">end</span></pre>
@@ -258,7 +246,7 @@
 
           
           <div class="method-source-code" id="create-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 49</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 51</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">create</span>
   <span class="ruby-ivar">@static_page</span> = <span class="ruby-constant">StaticPage</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:static_page</span>])
 
@@ -267,7 +255,7 @@
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@static_page</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">'Static page was successfully created.'</span> }
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@static_page</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:created</span>, <span class="ruby-identifier">location</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@static_page</span> }
     <span class="ruby-keyword">else</span>
-      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;new&quot;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;new&quot;</span> }
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@static_page</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
@@ -298,7 +286,7 @@
 
           
           <div class="method-source-code" id="destroy-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 81</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 83</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">destroy</span>
   <span class="ruby-ivar">@static_page</span> = <span class="ruby-constant">StaticPage</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
   <span class="ruby-ivar">@static_page</span>.<span class="ruby-identifier">destroy</span>
@@ -334,7 +322,7 @@
 
           
           <div class="method-source-code" id="edit-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 43</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 45</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">edit</span>
   <span class="ruby-ivar">@static_page</span> = <span class="ruby-constant">StaticPage</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 <span class="ruby-keyword">end</span></pre>
@@ -346,39 +334,6 @@
 
         
       </div><!-- edit-method -->
-
-    
-      <div id="method-i-home" class="method-detail ">
-        
-        <div class="method-heading">
-          <span class="method-name">home</span><span
-            class="method-args">()</span>
-          <span class="method-click-advice">click to toggle source</span>
-        </div>
-        
-
-        <div class="method-description">
-          
-          
-          
-
-          
-          <div class="method-source-code" id="home-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 13</span>
-<span class="ruby-keyword">def</span> <span class="ruby-identifier">home</span>
-  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
-    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># show.html.erb</span>
-    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@static_page</span> }
-  <span class="ruby-keyword">end</span>
-<span class="ruby-keyword">end</span></pre>
-          </div><!-- home-source -->
-          
-        </div>
-
-        
-
-        
-      </div><!-- home-method -->
 
     
       <div id="method-i-index" class="method-detail ">
@@ -432,7 +387,7 @@
 
           
           <div class="method-source-code" id="new-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 33</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 35</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">new</span>
   <span class="ruby-ivar">@static_page</span> = <span class="ruby-constant">StaticPage</span>.<span class="ruby-identifier">new</span>
 
@@ -462,12 +417,20 @@
 
         <div class="method-description">
           
-          <p>GET /static_pages/1 GET /static_pages/1.json</p>
+          <pre class="ruby"><span class="ruby-keyword">def</span> <span class="ruby-identifier">home</span>
+  <span class="ruby-identifier">respond_to</span> <span class="ruby-keyword">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">format</span><span class="ruby-operator">|</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> <span class="ruby-comment"># show.html.erb</span>
+    <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@static_page</span> }
+  <span class="ruby-keyword">end</span>
+<span class="ruby-keyword">end</span>
+</pre>
+
+<p># GET /static_pages/1 # GET /static_pages/1.json</p>
           
 
           
           <div class="method-source-code" id="show-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 22</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 24</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">show</span>
   <span class="ruby-ivar">@static_page</span> = <span class="ruby-constant">StaticPage</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 
@@ -502,7 +465,7 @@
 
           
           <div class="method-source-code" id="update-source">
-            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 65</span>
+            <pre><span class="ruby-comment"># File app/controllers/static_pages_controller.rb, line 67</span>
 <span class="ruby-keyword">def</span> <span class="ruby-identifier">update</span>
   <span class="ruby-ivar">@static_page</span> = <span class="ruby-constant">StaticPage</span>.<span class="ruby-identifier">find</span>(<span class="ruby-identifier">params</span>[<span class="ruby-value">:id</span>])
 
@@ -511,7 +474,7 @@
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">redirect_to</span> <span class="ruby-ivar">@static_page</span>, <span class="ruby-identifier">notice</span><span class="ruby-operator">:</span> <span class="ruby-string">'Static page was successfully updated.'</span> }
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">head</span> <span class="ruby-value">:no_content</span> }
     <span class="ruby-keyword">else</span>
-      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">action</span><span class="ruby-operator">:</span> <span class="ruby-string">&quot;edit&quot;</span> }
+      <span class="ruby-identifier">format</span>.<span class="ruby-identifier">html</span> { <span class="ruby-identifier">render</span> <span class="ruby-string">&quot;edit&quot;</span> }
       <span class="ruby-identifier">format</span>.<span class="ruby-identifier">json</span> { <span class="ruby-identifier">render</span> <span class="ruby-identifier">json</span><span class="ruby-operator">:</span> <span class="ruby-ivar">@static_page</span>.<span class="ruby-identifier">errors</span>, <span class="ruby-identifier">status</span><span class="ruby-operator">:</span> <span class="ruby-value">:unprocessable_entity</span> }
     <span class="ruby-keyword">end</span>
   <span class="ruby-keyword">end</span>
