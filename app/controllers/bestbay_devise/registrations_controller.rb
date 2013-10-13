@@ -1,3 +1,8 @@
+# Author::    Hunters  (mailto:fall-2013-hunters@sv.cmu.edu)
+# Copyright:: Copyright (c) 2013 Carnegie Mellon University
+# License::   Distributes under the same terms as Ruby
+
+# This class handles the registrations for Devise
 class BestbayDevise::RegistrationsController < Devise::RegistrationsController
 
   def index

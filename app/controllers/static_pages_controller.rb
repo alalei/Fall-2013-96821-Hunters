@@ -1,3 +1,8 @@
+# Author::    Hunters  (mailto:fall-2013-hunters@sv.cmu.edu)
+# Copyright:: Copyright (c) 2013 Carnegie Mellon University
+# License::   Distributes under the same terms as Ruby
+
+# This class is the controller of the Model Static_page
 class StaticPagesController < ApplicationController
   # GET /static_pages
   # GET /static_pages.json
