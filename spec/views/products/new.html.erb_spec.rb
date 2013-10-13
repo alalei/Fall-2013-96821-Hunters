@@ -41,3 +41,79 @@ describe "products/new" do
     end
   end
 end
+
+
+describe "creating products" do
+  before :each do
+    Category.create(:name => 'Electronics', :description => 'Electronics')
+    visit '/products/new'
+    fill_in "Title", :with => "Laptop"
+    page.select "Electronics", :from => "Category"
+    fill_in "Brand", :with => "Lenovo"
+    fill_in "product_ptype", :with => "Electronics"
+  end
+
+  describe "when posting a product for sale"     do
+    before :each do
+      fill_in "Shipping cost", :with => 9.99
+      attach_file("product_image", "#{Rails.root}/spec/support/example.jpg")
+    end
+
+    it "creates a product in new condition for sale succesfully" do
+      fill_in "Fixed price", :with => 9.99
+      choose "product_condition_true"
+      click_button "Create Product"
+      expect(page).to have_content("Product was successfully created")
+    end
+
+    it "should not create a product for sale if fixed price is missing" do
+      fill_in "Fixed price", :with => ""
+      choose "product_condition_true"
+      click_button "Create Product"
+      page.should_not(have_content("Product was succesfully created"))
+    end
+
+    it "should create a product in used condition succesfully for sale" do
+      fill_in "Fixed price", :with => 9.99
+      choose "product_condition_false"
+      click_button "Create Product"
+      expect(page).to have_content("Product was successfully created")
+    end
+  end
+
+
+
+
+  describe "when posting a product for bidding"     do
+    before :each do
+      check('product_is_bid')
+      fill_in "Shipping cost", :with => 9.99
+      fill_in "Listing days", :with => 3
+      fill_in "product_start_date", :with => "11/12/13"
+      attach_file("product_image", "#{Rails.root}/spec/support/example.jpg")
+    end
+
+    it "creates a product in new condition for bidding succesfully" do
+      choose "product_condition_true"
+      fill_in "Starting price", :with => 9.99
+      click_button "Create Product"
+      expect(page).to have_content("Product was successfully created")
+    end
+
+
+    it "should not create a product for bidding if starting price is missing" do
+      choose "product_condition_true"
+      fill_in "Starting price", :with => ""
+      click_button "Create Product"
+      page.should_not(have_content("Product was succesfully created"))
+    end
+
+    it "should create a product in used condition succesfully for bidding" do
+      choose "product_condition_false"
+      fill_in "Starting price", :with => 9.99
+      click_button "Create Product"
+      page.should_not(have_content("Product was succesfully created"))
+    end
+  end
+
+end
