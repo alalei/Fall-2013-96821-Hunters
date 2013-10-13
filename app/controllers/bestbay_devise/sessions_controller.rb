@@ -1,3 +1,8 @@
+# Author::    Hunters  (mailto:fall-2013-hunters@sv.cmu.edu)
+# Copyright:: Copyright (c) 2013 Carnegie Mellon University
+# License::   Distributes under the same terms as Ruby
+
+# This class handles the sessions for Devise
 class BestbayDevise::SessionsController < Devise::SessionsController
   def index
   end

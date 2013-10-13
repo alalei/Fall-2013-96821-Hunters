@@ -1,3 +1,8 @@
+# Author::    Hunters  (mailto:fall-2013-hunters@sv.cmu.edu)
+# Copyright:: Copyright (c) 2013 Carnegie Mellon University
+# License::   Distributes under the same terms as Ruby
+
+# This class is the Model Product
 class Product < ActiveRecord::Base
   #Product attributes
   attr_accessible :category_id, :condition, :fixed_price, :id, :is_bid, :starting_price, :title, :brand, :ptype, :listing_days, :start_date, :shipping_cost, :image, :remote_image_url, :days_used
