@@ -19,4 +19,30 @@ describe "categories/new" do
       assert_select "input#category_description[name=?]", "category[description]"
     end
   end
+
+  describe "create a new category succesfully" do
+      before :each do
+        visit '/categories/new'
+        fill_in "Name", :with => "Sample"
+        fill_in "Description", :with => "Sample Description"
+      end
+
+      it "creates a category succesfully" do
+        click_button "Create Category"
+        expect(page).to have_content("Category was successfully created")
+      end
+
+      it "should not create a category without name" do
+        fill_in "Name", :with => ""
+        click_button "Create Category"
+        expect(page).not_to have_content("Category was successfully created")
+      end
+
+      it "should create a category without a description" do
+        fill_in "Name", :with => "Sample"
+        fill_in "Description", :with => ""
+        click_button "Create Category"
+        expect(page).to have_content("Category was successfully created")
+      end
+  end
 end
