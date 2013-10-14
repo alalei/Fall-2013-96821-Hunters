@@ -1,5 +1,6 @@
 # encoding: utf-8
-
+##
+# This class helps in uploading images
 class ImageUploader < CarrierWave::Uploader::Base
 
   # Include RMagick or MiniMagick support:

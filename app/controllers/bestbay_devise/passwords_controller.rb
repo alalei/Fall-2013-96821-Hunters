@@ -1,8 +1,8 @@
+##
 # Author::    Hunters  (mailto:fall-2013-hunters@sv.cmu.edu)
 # Copyright:: Copyright (c) 2013 Carnegie Mellon University
 # License::   Distributes under the same terms as Ruby
-
-# This class handles the passwords for Devise
+# This class overrides passwords handling for Devise - not used for now
 class BestbayDevise::PasswordsController < Devise::PasswordsController
 
   def index
